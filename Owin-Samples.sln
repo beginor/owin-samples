@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin01_Helloworld", "Owin01_Helloworld\Owin01_Helloworld.csproj", "{7EBF4A7D-AA9D-4D06-A109-63C25723F4DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin02_WebApi", "Owin02_WebApi\Owin02_WebApi.csproj", "{57BCD4F5-3E24-4B13-947A-98C00AC7ACA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin02_WebApi_Katana", "Owin02_WebApi_Katana\Owin02_WebApi_Katana.csproj", "{91FC757E-5205-4C0B-82BA-A4CB40D3722E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin02_WebApi_Nowin", "Owin02_WebApi_Nowin\Owin02_WebApi_Nowin.csproj", "{654C3099-C64F-43B7-B9E6-3DF77EEDC069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin03_Middleware", "Owin03_Middleware\Owin03_Middleware.csproj", "{0B597B7B-58E5-482C-9A09-2DD607CBA6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin04_OAuthServer", "Owin04_OAuthServer\Owin04_OAuthServer.csproj", "{2CF086A9-80BA-4D95-B2E1-F35DB68CF056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin04_Consts", "Owin04_Consts\Owin04_Consts.csproj", "{9949E0F9-2C37-42E1-870C-536A2980E523}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B597B7B-58E5-482C-9A09-2DD607CBA6FB}.Debug|x86.ActiveCfg = Debug|x86
+		{0B597B7B-58E5-482C-9A09-2DD607CBA6FB}.Debug|x86.Build.0 = Debug|x86
+		{0B597B7B-58E5-482C-9A09-2DD607CBA6FB}.Release|x86.ActiveCfg = Release|x86
+		{0B597B7B-58E5-482C-9A09-2DD607CBA6FB}.Release|x86.Build.0 = Release|x86
+		{2CF086A9-80BA-4D95-B2E1-F35DB68CF056}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CF086A9-80BA-4D95-B2E1-F35DB68CF056}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CF086A9-80BA-4D95-B2E1-F35DB68CF056}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CF086A9-80BA-4D95-B2E1-F35DB68CF056}.Release|x86.Build.0 = Release|Any CPU
+		{57BCD4F5-3E24-4B13-947A-98C00AC7ACA6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57BCD4F5-3E24-4B13-947A-98C00AC7ACA6}.Debug|x86.Build.0 = Debug|Any CPU
+		{57BCD4F5-3E24-4B13-947A-98C00AC7ACA6}.Release|x86.ActiveCfg = Release|Any CPU
+		{57BCD4F5-3E24-4B13-947A-98C00AC7ACA6}.Release|x86.Build.0 = Release|Any CPU
+		{654C3099-C64F-43B7-B9E6-3DF77EEDC069}.Debug|x86.ActiveCfg = Debug|x86
+		{654C3099-C64F-43B7-B9E6-3DF77EEDC069}.Debug|x86.Build.0 = Debug|x86
+		{654C3099-C64F-43B7-B9E6-3DF77EEDC069}.Release|x86.ActiveCfg = Release|x86
+		{654C3099-C64F-43B7-B9E6-3DF77EEDC069}.Release|x86.Build.0 = Release|x86
+		{7EBF4A7D-AA9D-4D06-A109-63C25723F4DA}.Debug|x86.ActiveCfg = Debug|x86
+		{7EBF4A7D-AA9D-4D06-A109-63C25723F4DA}.Debug|x86.Build.0 = Debug|x86
+		{7EBF4A7D-AA9D-4D06-A109-63C25723F4DA}.Release|x86.ActiveCfg = Release|x86
+		{7EBF4A7D-AA9D-4D06-A109-63C25723F4DA}.Release|x86.Build.0 = Release|x86
+		{91FC757E-5205-4C0B-82BA-A4CB40D3722E}.Debug|x86.ActiveCfg = Debug|x86
+		{91FC757E-5205-4C0B-82BA-A4CB40D3722E}.Debug|x86.Build.0 = Debug|x86
+		{91FC757E-5205-4C0B-82BA-A4CB40D3722E}.Release|x86.ActiveCfg = Release|x86
+		{91FC757E-5205-4C0B-82BA-A4CB40D3722E}.Release|x86.Build.0 = Release|x86
+		{9949E0F9-2C37-42E1-870C-536A2980E523}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9949E0F9-2C37-42E1-870C-536A2980E523}.Debug|x86.Build.0 = Debug|Any CPU
+		{9949E0F9-2C37-42E1-870C-536A2980E523}.Release|x86.ActiveCfg = Release|Any CPU
+		{9949E0F9-2C37-42E1-870C-536A2980E523}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

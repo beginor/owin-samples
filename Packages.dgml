@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.0" Category="Package" Bounds="674.958333333333,223.84,217.896666666667,25.96" Label="Microsoft.AspNet.WebApi.Client 5.2.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.2.0" Category="Package" Bounds="677.691666666667,167.88,212.43,25.96" Label="Microsoft.AspNet.WebApi.Core 5.2.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Owin 5.2.0" Category="Package" Bounds="573.438333333333,111.92,214.936666666667,25.96" Label="Microsoft.AspNet.WebApi.Owin 5.2.0" />
+    <Node Id="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" Category="Package" Bounds="327.426666666667,55.96,258.96,25.96" Label="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" />
+    <Node Id="Microsoft.Owin 3.0.0" Category="Package" Bounds="487.761666666667,167.88,128.29,25.96" Label="Microsoft.Owin 3.0.0" />
+    <Node Id="Microsoft.Owin.Host.HttpListener 3.0.0" Category="Package" Bounds="117.336666666667,111.92,223.14,25.96" Label="Microsoft.Owin.Host.HttpListener 3.0.0" />
+    <Node Id="Microsoft.Owin.Hosting 3.0.0" Category="Package" Bounds="370.725,111.92,172.363333333333,25.96" Label="Microsoft.Owin.Hosting 3.0.0" />
+    <Node Id="Newtonsoft.Json 6.0.4" Category="Package" Bounds="716.18,279.8,135.453333333333,25.96" Label="Newtonsoft.Json 6.0.4" />
+    <Node Id="Nowin 0.11.0.0" Category="Package" Bounds="0,167.88,97.8133333333333,25.96" Label="Nowin 0.11.0.0" />
+    <Node Id="NowinApp" Category="Project" Bounds="10.795,111.92,76.2233333333333,25.96" Label="NowinApp" />
+    <Node Id="Owin 1.0" Category="Package" Bounds="518.785,223.84,66.2433333333333,25.96" Label="Owin 1.0" />
+    <Node Id="WebApiOwin" Category="Project" Bounds="412.078333333333,0,89.6566666666666,25.96" Label="WebApiOwin" />
+  </Nodes>
+  <Links>
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.0" Target="Newtonsoft.Json 6.0.4" Category="Package Dependency" Bounds="783.906677246094,249.800003051758,0,20.9999847412109" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.2.0" Target="Microsoft.AspNet.WebApi.Client 5.2.0" Category="Package Dependency" Bounds="783.906677246094,193.839996337891,0,21" />
+    <Link Source="Microsoft.AspNet.WebApi.Owin 5.2.0" Target="Microsoft.AspNet.WebApi.Core 5.2.0" Category="Package Dependency" Bounds="704.797668457031,137.880004882813,47.309814453125,25.7034606933594" />
+    <Link Source="Microsoft.AspNet.WebApi.Owin 5.2.0" Target="Microsoft.Owin 3.0.0" Category="Package Dependency" Bounds="590.084983392172,137.880001525879,60.8999564787906,26.4183000199613" />
+    <Link Source="Microsoft.AspNet.WebApi.Owin 5.2.0" Target="Owin 1.0" Category="Package Dependency" Bounds="573.665588366687,137.880001525879,92.2802191719846,80.0620063055632" />
+    <Link Source="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" Target="Microsoft.AspNet.WebApi.Owin 5.2.0" Category="Package Dependency" Bounds="508.86376953125,81.9199981689453,111.354125976563,27.8186492919922" />
+    <Link Source="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" Target="Microsoft.Owin.Host.HttpListener 3.0.0" Category="Package Dependency" Bounds="290.532165527344,81.9199981689453,113.489593505859,27.8547286987305" />
+    <Link Source="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" Target="Microsoft.Owin.Hosting 3.0.0" Category="Package Dependency" Bounds="456.906677246094,81.9199981689453,0,21" />
+    <Link Source="Microsoft.Owin 3.0.0" Target="Owin 1.0" Category="Package Dependency" Bounds="551.906646728516,193.840000610352,0,20.9999914550781" />
+    <Link Source="Microsoft.Owin.Hosting 3.0.0" Target="Microsoft.Owin 3.0.0" Category="Package Dependency" Bounds="478.942047119141,137.880004882813,43.1745910644531,25.4320983886719" />
+    <Link Source="Microsoft.Owin.Hosting 3.0.0" Target="Owin 1.0" Category="Package Dependency" Bounds="456.906677246094,137.880004882813,65.2099609375,81.3921051025391" />
+    <Link Source="NowinApp" Target="Microsoft.Owin 3.0.0" Category="Installed Package" Bounds="86.7216949462891,136.180709838867,392.70475769043,31.7497863769531" />
+    <Link Source="NowinApp" Target="Nowin 0.11.0.0" Category="Installed Package" Bounds="48.906665802002,137.880004882813,0,21" />
+    <Link Source="WebApiOwin" Target="Microsoft.AspNet.WebApi.OwinSelfHost 5.2.0" Category="Installed Package" Bounds="456.906677246094,25.9599990844727,0,21" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
