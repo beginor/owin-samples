@@ -4,11 +4,11 @@ using System.Web.Mvc;
 
 namespace Owin04_OAuthServer.Controllers {
 
-    public class OAuthController : Controller {
+    public class AuthorizeController : Controller {
 
-        public ActionResult Authorize() {
+        public ActionResult Index() {
             if (Response.StatusCode != 200) {
-                return View("AuthorizeError");
+                return View("Error");
             }
             var authentication = HttpContext.GetOwinContext().Authentication;
             var ticket = authentication.AuthenticateAsync(Startup.AuthenticationType).Result;

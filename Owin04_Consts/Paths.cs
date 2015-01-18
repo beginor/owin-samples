@@ -15,10 +15,9 @@ namespace Owin04_Consts {
         public const string LoginPath = "/Account/Login";
         public const string LogoutPath = "/Account/Logout";
 
-        public const string AuthorizePath = "/OAuth/Authorize";
-        public const string TokenPath = "/OAuth/Token";
+        public const string AuthorizePath = "/Authorize";
+        public const string TokenPath = "/Token";
 
-        public const string MePath = "/api/Me";
     }
 }
 
