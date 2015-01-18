@@ -2,7 +2,7 @@
 
 namespace Owin04_OAuthClient.Controllers {
 
-    public class HomeController : Controller {
+    public class ImplicitController : Controller {
 
         public ActionResult Index() {
             return View();
