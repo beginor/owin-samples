@@ -1,0 +1,11 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Logout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>You have logout!</p>
+
+<p><a href="@Request.QueryString["ReturnUrl"]">Go back!</a></p>

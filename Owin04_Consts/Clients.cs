@@ -3,6 +3,7 @@
 namespace Owin04_Consts {
 
     public static class Clients {
+
         public readonly static Client Client1 = new Client {
             Id = "123456",
             Secret = "abcdef",
@@ -17,6 +18,7 @@ namespace Owin04_Consts {
     }
 
     public class Client {
+
         public string Id { get; set; }
 
         public string Secret { get; set; }

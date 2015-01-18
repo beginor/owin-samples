@@ -1,0 +1,18 @@
+﻿@using Microsoft.Owin
+
+@{
+    ViewBag.Title = "Authorize Error";
+    IOwinContext owinContext = Context.GetOwinContext();
+    var error = owinContext.Get<string>("oauth.Error");
+    var errorDescription = owinContext.Get<string>("oauth.ErrorDescription");
+    var errorUri = owinContext.Get<string>("oauth.ErrorUri");
+}
+
+<div class="container">
+    <div class="alert-warning">
+        <strong>@ViewBag.Title</strong>
+        <p>Error: @error</p>
+        <p>@errorDescription</p>
+        <p>@errorUri</p>
+    </div>
+</div>

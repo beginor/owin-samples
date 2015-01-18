@@ -1,0 +1,35 @@
+﻿@using Owin04_OAuthServer
+
+@{
+    ViewBag.Title = "Authorize Confirm";
+    var authentication = Context.GetOwinContext().Authentication;
+    var ticket = authentication.AuthenticateAsync(Startup.AuthenticationType).Result;
+    var identity = ticket != null ? ticket.Identity : null;
+    var scopes = (Request.QueryString.Get("scope") ?? "").Split(' ');
+}
+
+<div class="container">
+    <div style="margin-top: 50px;" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="pull-right"><span class="glyphicon glyphicon-cog"></span></div>
+                <div class="panel-title">@ViewBag.Title</div>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" method="POST" role="form">
+                    <p>Hello, @identity.Name</p>
+                    <p>A third party application want to do the following on your behalf:</p>
+                    <ul>
+                        @foreach (var scope in scopes) {
+                            <li>@scope</li>
+                        }
+                    </ul>
+                    <p>
+                        <input type="submit" name="submit.Grant" value="Grant" class="btn btn-success"/>
+                        <input type="submit" name="submit.Login" value="Sign in as different user" class="btn btn-primary"/>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,28 +4,16 @@ namespace Owin04_Consts {
 
     public static class Paths {
 
-        /// <summary>
-        /// AuthorizationServer project should run on this URL
-        /// </summary>
-        public const string AuthorizationServerBaseAddress = "http://localhost:11625";
+        public const string ImplicitGrantCallBackPath = "http://localhost:8080/Owin04_OAuthClient/Home/Login";
 
-        /// <summary>
-        /// ResourceServer project should run on this URL
-        /// </summary>
-        public const string ResourceServerBaseAddress = "http://localhost:38385";
+        public const string AuthorizeCodeCallBackPath = "http://localhost:8080/";
 
-        /// <summary>
-        /// ImplicitGrant project should be running on this specific port '38515'
-        /// </summary>
-        public const string ImplicitGrantCallBackPath = "http://localhost:38515/Home/SignIn";
+        public const string ResourceUserApiPath = "http://localhost:8080/Owin04_OAuthResource/api/user";
 
-        /// <summary>
-        /// AuthorizationCodeGrant project should be running on this URL.
-        /// </summary>
-        public const string AuthorizeCodeCallBackPath = "http://localhost:38500/";
+        public const string AuthorizationServerBaseAddress = "http://localhost:8080/OWin04_OAuthServer";
 
-        public const string LoginPath = "Account/Login";
-        public const string LogoutPath = "Account/Logout";
+        public const string LoginPath = "/Account/Login";
+        public const string LogoutPath = "/Account/Logout";
 
         public const string AuthorizePath = "/OAuth/Authorize";
         public const string TokenPath = "/OAuth/Token";

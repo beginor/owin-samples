@@ -10,6 +10,7 @@ namespace Owin04_OAuthServer {
         public void Configuration(IAppBuilder app) {
             ConfigureAuth(app);
         }
+
     }
 }
 
