@@ -17,11 +17,10 @@
             </div>
             <div class="panel-body">
                 <form class="form-horizontal" method="POST" role="form">
-                    <p>Hello, @identity.Name</p>
-                    <p>A third party application want to do the following on your behalf:</p>
-                    <ul>
+                    <p>Hello, @identity.Name, A third party application want to do the following on your behalf:</p>
+                    <ul class="list-group">
                         @foreach (var scope in scopes) {
-                            <li>@scope</li>
+                            <li class="list-group-item">@scope</li>
                         }
                     </ul>
                     <p>

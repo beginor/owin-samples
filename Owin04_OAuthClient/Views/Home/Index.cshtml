@@ -1,29 +1,29 @@
 ﻿@using Owin04_Consts
 
 @{
-    ViewBag.Title = "OAuth Client Page";
+    ViewBag.Title = "OAuth Test Page";
 }
 
 <div class="container">
     <h2>@ViewBag.Title</h2>
 
-
-    <form id="form1">
-        <div>
-            Access Token<br/>
-            <input id="accessToken" name="AccessToken"/>
-            <input id="authorize" type="button" name="signin.AccessToken" value="Authorize"/>
-            <br/>
-            <input id="callApi" name="submit.CallApi" value="Access Protected Resource API" type="button"/>
-        </div>
-        <div id="output">
-        </div>
-    </form>
+    <p>1. Click Authorize button to get your access token.</p>
+    <p>
+        <input id="authorize" type="button" name="signin.AccessToken" value="Authorize" class="btn btn-primary"/>
+        <br/><br/>
+        <input id="accessToken" name="AccessToken" type="text" class="form-control"/>
+    </p>
+    <p>2. Click "Access Protected Resource API" button to get resource.</p>
+    <p>
+        <input id="callApi" name="submit.CallApi" value="Access Protected Resource API" type="button" class="btn btn-success" />
+    </p>
+    <div id="output">
+    </div>
 </div>
 
 @section scripts {
     <script type="text/javascript">
-        (function($) {
+        (function ($) {
             var authorizeUri = '@(Paths.AuthorizationServerBaseAddress + Paths.AuthorizePath)';
             var tokenUri = '@(Paths.AuthorizationServerBaseAddress + Paths.TokenPath)';
             var apiUri = '@Paths.ResourceUserApiPath';
@@ -32,7 +32,7 @@
             var returnUri = '@Clients.Client2.RedirectUrl';
             var nonce = 'my-nonce';
 
-            $('#authorize').click(function() {
+            $('#authorize').click(function () {
 
                 var uri = addQueryString(authorizeUri, {
                     'client_id': clientId,
@@ -43,17 +43,17 @@
                 });
 
                 window.oauth = {};
-                window.oauth.signin = function(data) {
+                window.oauth.signin = function (data) {
                     if (data.state !== nonce) {
                         return;
                     }
                     $('#accessToken').val(data.access_token);
                 }
 
-                window.open(uri, 'authorize', 'width=640,height=480,location=yes');
+                window.open(uri, 'authorize', 'width=640,height=480');
             });
 
-            $('#callApi').click(function() {
+            $('#callApi').click(function () {
                 $.ajax(apiUri, {
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader('Authorization', 'Bearer ' + $('#accessToken').val());
