@@ -3,11 +3,30 @@
 }
 
 <div class="container">
-    <h2>OAuth Server Supported Gruant types:</h2>
-    <p>@Html.ActionLink("Authorization Code Grant", "Index", "AuthCode")</p>
-    <p>
-        @Html.ActionLink("Implicit Grant", "Index", "Implicit")
-    </p>
-    <p>Resource Owner Password Credentials Grant</p>
-    <p>Client Credentials Grant</p>
+
+    <ol class="breadcrumb">
+        <li class="active">Home</li>
+    </ol>
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">OAuth Server Supported Gruant types:</div>
+            </div>
+            <div class="panel-body">
+                <p>
+                    @Html.ActionLink("Authorization Code Grant", "Index", "AuthCode")
+                </p>
+                <p>
+                    @Html.ActionLink("Implicit Grant", "Index", "Implicit")
+                </p>
+                <p>
+                    Resource Owner Password Credentials Grant
+                </p>
+                <p>
+                    Client Credentials Grant
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
