@@ -4,9 +4,9 @@ namespace Owin04_Consts {
 
     public static class Paths {
 
-        public const string ImplicitGrantCallBackPath = "http://localhost:8080/Owin04_OAuthClient/Home/Login";
+        public const string ImplicitGrantCallBackPath = "http://localhost:8080/Owin04_OAuthClient/Implicit/Login";
 
-        public const string AuthorizeCodeCallBackPath = "http://localhost:8080/";
+        public const string AuthorizeCodeCallBackPath = "http://localhost:8080/Owin04_OAuthClient/AuthCode";
 
         public const string ResourceUserApiPath = "http://localhost:8080/Owin04_OAuthResource/api/user";
 

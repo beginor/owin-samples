@@ -1,0 +1,53 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Authorization Code Grant";
+}
+
+<div class="container">
+
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="active">Authorization Code Grant</li>
+    </ol>
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">@ViewBag.Title</div>
+            </div>
+            <div class="panel-body">
+                <form id="form1" action="@ViewBag.Action" method="POST" class="form-horizontal" style="margin: 10px;">
+
+                    <div class="form-group">
+                        <label for="accessToken" class="control-label">Access Token</label>
+                        <div class="input-group">
+                            <input id="accessToken" name="AccessToken" class="form-control" placeholder="Click Authorize button to get your access token" type="text" value="@ViewBag.AccessToken"/>
+                            <span class="input-group-btn">
+                                <input id="authorize" name="submit.Authorize" class="btn btn-default" value="Authorize" type="submit" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="RefreshToken" class="control-label">Refresh Tokensh Token</label>
+                        <div class="input-group">
+                            <input id="RefreshToken" name="RefreshToken" class="form-control" type="text" value="@ViewBag.RefreshToken"/>
+                            <span class="input-group-btn"><input id="refresh" class="btn btn-default" name="submit.Refresh" value="Refresh" type="submit" /></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input id="callApi" name="submit.CallApi" class="btn btn-default" value="Access Protected Resource API" type="submit"/>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+        <div class="alert alert-info alert-dismissable">
+            @ViewBag.ApiResponse
+        </div>
+    </div>
+</div>

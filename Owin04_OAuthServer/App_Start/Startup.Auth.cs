@@ -18,8 +18,7 @@ namespace Owin04_OAuthServer {
 
         public const string AuthenticationType = "Application";
 
-        private readonly ConcurrentDictionary<string, string> _authenticationCodes =
-            new ConcurrentDictionary<string, string>(StringComparer.Ordinal);
+        private readonly ConcurrentDictionary<string, string> authenticationCodes = new ConcurrentDictionary<string, string>(StringComparer.Ordinal);
 
         private void ConfigureAuth(IAppBuilder app) {
             app.UseCookieAuthentication(new CookieAuthenticationOptions {
@@ -66,7 +65,7 @@ namespace Owin04_OAuthServer {
 
         private void ReceiveAuthenticationCode(AuthenticationTokenReceiveContext context) {
             string value;
-            if (_authenticationCodes.TryRemove(context.Token, out value)) {
+            if (authenticationCodes.TryRemove(context.Token, out value)) {
                 context.DeserializeTicket(value);
             }
         }
@@ -75,7 +74,7 @@ namespace Owin04_OAuthServer {
             var tokenValue = Guid.NewGuid().ToString("n") + Guid.NewGuid().ToString("n");
             context.SetToken(tokenValue);
             var authenticationCode = context.SerializeTicket();
-            _authenticationCodes[context.Token] = authenticationCode;
+            authenticationCodes[context.Token] = authenticationCode;
         }
 
         private Task GrantClientCredetails(OAuthGrantClientCredentialsContext context) {

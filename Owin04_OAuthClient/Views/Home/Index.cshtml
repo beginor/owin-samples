@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "OAuth Test Page";
+}
+
+<div class="container">
+    <h2>OAuth Server Supported Gruant types:</h2>
+    <p>@Html.ActionLink("Authorization Code Grant", "Index", "AuthCode")</p>
+    <p>
+        @Html.ActionLink("Implicit Grant", "Index", "Implicit")
+    </p>
+    <p>Resource Owner Password Credentials Grant</p>
+    <p>Client Credentials Grant</p>
+</div>

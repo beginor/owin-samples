@@ -1,24 +1,45 @@
 ﻿@using Owin04_Consts
 
 @{
-    ViewBag.Title = "OAuth Test Page";
+    ViewBag.Title = "Implicit Grunt Page";
 }
 
 <div class="container">
-    <h2>@ViewBag.Title</h2>
 
-    <p>1. Click Authorize button to get your access token.</p>
-    <p>
-        <input id="authorize" type="button" name="signin.AccessToken" value="Authorize" class="btn btn-primary"/>
-        <br/><br/>
-        <input id="accessToken" name="AccessToken" type="text" class="form-control"/>
-    </p>
-    <p>2. Click "Access Protected Resource API" button to get resource.</p>
-    <p>
-        <input id="callApi" name="submit.CallApi" value="Access Protected Resource API" type="button" class="btn btn-success" />
-    </p>
-    <div id="output">
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="active">Implicit Grunt Page</li>
+    </ol>
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">@ViewBag.Title</div>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" style="margin: 10px;">
+
+                    <div class="form-group">
+                        <label for="accessToken">Access Token</label>
+                        <div class="input-group">
+                            <input id="accessToken" name="AccessToken" type="text" class="form-control"/>
+                            <span class="input-group-btn">
+                                <input id="authorize" type="button" name="signin.AccessToken" value="Authorize" class="btn btn-default" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input id="callApi" name="submit.CallApi" value="Access Protected Resource API" type="button" class="btn btn-success"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="output" class="alert alert-info">
+        </div>
     </div>
+
 </div>
 
 @section scripts {
