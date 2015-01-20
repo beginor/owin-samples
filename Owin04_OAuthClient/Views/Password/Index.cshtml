@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Resource Owner Password Credentials Grant";
+}
+
+<div class="container">
+
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <div class="panel-title">@ViewBag.Title</div>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" method="POST" style="margin: 10px;">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input id="username" name="username" class="form-control" type="text" value="@ViewBag.Username"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" class="form-control" value="@ViewBag.Password"/>
+                    </div>
+                    <div class="form-group">
+                        <div class="container">
+                            <input type="submit" name="grant" class="btn btn-primary" value="Grant"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="alert alert-info">
+            AccessToken:
+            <input type="text" class="form-control" value="@ViewBag.AccessToken" />
+        </div>
+        <div class="alert alert-success">
+            Result: @ViewBag.ApiResult
+        </div>
+    </div>
+</div>

@@ -117,6 +117,7 @@
     <Content Include="Views\Implicit\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AuthCode\Index.cshtml" />
+    <Content Include="Views\Password\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,6 +131,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AuthCodeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PasswordController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
